@@ -18,7 +18,7 @@ node {
     }
      stage ('Deploy') {
           sshagent(credentials : ['sshcredentials']) {
-            sh 'ssh -o StrictHostKeyChecking=no elyes@localhost uptime'
+            sh 'ssh -o StrictHostKeyChecking=no elyes@172.17.0.1 uptime'
         }
      }
 }
