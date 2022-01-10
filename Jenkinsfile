@@ -13,7 +13,6 @@ node {
     }
      stage('Push Image'){
        docker.withRegistry('', 'dockerhubcredentials') {            
-       app.push("${env.BUILD_NUMBER}")            
        app.push("latest")   
       }
     }
