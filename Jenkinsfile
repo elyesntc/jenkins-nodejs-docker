@@ -18,7 +18,7 @@ node {
     }
      stage ('Deploy') {
           sshagent(credentials : ['sshcredentials']) {
-            sh 'ssh -o StrictHostKeyChecking=no elyes@172.17.0.1 uptime'
+            sh 'ssh -o StrictHostKeyChecking=no ec2-user@ec2-3-93-58-249.compute-1.amazonaws.com uptime'
         }
      }
 }
