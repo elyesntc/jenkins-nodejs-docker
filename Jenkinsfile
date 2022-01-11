@@ -18,7 +18,7 @@ node {
     }
      stage ('Deploy') {
           sshagent(credentials : ['sshcredentials']) {
-            sh 'ssh -o StrictHostKeyChecking=no ec2-user@ec2-3-93-58-249.compute-1.amazonaws.com docker run -itd --name web -p 80:8080 elyesntc/jenkins-nodejs-docker'
+            sh 'ssh -o StrictHostKeyChecking=no ec2-user@ec2-34-230-59-15.compute-1.amazonaws.com docker run -itd --name web -p 80:8080 elyesntc/jenkins-nodejs-docker'
         }
      }
 }
